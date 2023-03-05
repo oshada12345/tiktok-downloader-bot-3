@@ -60,7 +60,7 @@ def download_video(message):
     except:
         text = 'Некоректная ссылка, или тех.работы. Попробуйте позже.'
         bot.send_message(chat_id=message.chat.id,
-                         text=text)
+                         text=text, reply_markup=start_inline_keyboard())
 
 
 bot.polling(none_stop=True, interval=0)
